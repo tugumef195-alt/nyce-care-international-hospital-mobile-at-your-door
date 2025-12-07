@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyce care international- Donate Today</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #0d47a1;
+            --secondary: #e8f4f8;
+            --accent: #ff6b35;
+            --text: #333;
+            --light-text: #666;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --border: #e0e0e0;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--light-gray);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #e55a2b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Impact Section */
+        .impact {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+        }
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .impact-card {
+            background-color: var(--secondary);
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: var(--shadow);
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .impact-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .impact-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        
+        /* Donation Section */
+        .donation {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .donation-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .donation-form-container {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-step {
+            display: none;
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+        
+        .step-title {
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+        }
+        
+        .donation-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .donation-option {
+            flex: 1;
+            min-width: 80px;
+        }
+        
+        .donation-option input {
+            display: none;
+        }
+        
+        .donation-option label {
+            display: block;
+            padding: 12px 10px;
+            background-color: var(--light-gray);
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .donation-option input:checked + label {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .btn-secondary {
+            background-color: var(--light-gray);
+            color: var(--text);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .security-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .badge {
+            background-color: var(--light-gray);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .testimonials {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+        
+        /* Matching Gifts Section */
+        .matching-gifts {
+            padding: 60px 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+        
+        .matching-gifts p {
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-question {
+            background-color: var(--white);
+            padding: 18px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .faq-answer {
+            background-color: var(--white);
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #ccc;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-column a:hover {
+            color: var(--white);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-icons a {
+            font-size: 1.2rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-hospital"></i>
+                <div class="logo-text">Nyce care international</div>
+            </div>
+            <nav>
+                <ul>
+                 
+                    
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transform Lives. Give the Gift of Health.</h1>
+            <p>Your generous donation to nyce care international Hospital provides critical funding for advanced medical equipment, life-saving research, and compassionate patient care for those who need it most.</p>
+            <a href="#donate" class="btn">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact">
+        <div class="container">
+            <h2 class="section-title">Where Your Gift Goes</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>hospital services</h3>
+                    <p>Fund new technology to diagnose and treat disease.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Cancer Research</h3>
+                    <p>Support our groundbreaking clinical trials for new cancer therapies.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Newborn Intensive Care</h3>
+                    <p>Provide state-of-the-art incubators for our tiniest patients.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Charity Care</h3>
+                    <p>Ensure no one is denied treatment due to inability to pay.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation" id="donate">
+        <div class="container">
+            <h2 class="section-title">Make a Donation</h2>
+            <div class="donation-container">
+                <div class="donation-form-container">
+                    <form id="donation-form">
+                        <!-- Step 1: Donation Type -->
+                        <div class="form-step active" id="step-1">
+                            <h3 class="step-title">Choose Your Donation Type</h3>
+                            <div class="form-group">
+                                <div class="donation-options">
+                                    <div class="donation-option">
+                                        <input type="radio" id="one-time" name="donation-type" value="one-time" checked>
+                                        <label for="one-time">One-time Gift</label>
+                                    </div>
+                                    <div class="donation-option">
+                                        <input type="radio" id="monthly" name="donation-type" value="monthly">
+                                        <label for="monthly">Monthly Gift</label>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.9rem; color: var(--light-text); margin-top: 5px;">
+                                    <i class="fas fa-info-circle"></i> Monthly gifts provide sustained support as a Healing Partner.
+                                </p>
+                            </div>
+                            <div class="form-navigation">
+                                <div></div> <!-- Empty div for spacing -->
+                                <button type="button" class="btn next-step" data-step="2">Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Donation Amount -->
+                        <div class="form-step" id="step-2">
+                            <h3 class="step-title">Choose an Amount</h3>
+                            <div class="form-group">
+                                <div class="donation-options">
+                                    <div class="donation-option">
+                                        <input type="radio" id="amount-50" name="donation-amount" value="50">
+                                        <label for="amount-50">UGX1,000</label>
+                                    </div>
+                                    <div class="donation-option">
+                                        <input type="radio" id="amount-100" name="donation-amount" value="100" checked>
+                                        <label for="amount-100">UGX10,000</label>
+                                    </div>
+                                    <div class="donation-option">
+                                        <input type="radio" id="amount-250" name="donation-amount" value="250">
+                                        <label for="amount-250">UGX25,000</label>
+                                    </div>
+                                    <div class="donation-option">
+                                        <input type="radio" id="amount-500" name="donation-amount" value="500">
+                                        <label for="amount-500">UGX50,000</label>
+                                    </div>
+                                    <div class="donation-option">
+                                        <input type="radio" id="amount-1000" name="donation-amount" value="1000">
+                                        <label for="amount-1000">UGX100,000</label>
+                                    </div>
+                                </div>
+                                <div class="donation-option" style="margin-top: 10px;">
+                                    <input type="radio" id="amount-other" name="donation-amount" value="other">
+                                    <label for="amount-other">Other: UGX<input type="number" id="custom-amount" placeholder="Enter amount" style="border: none; background: transparent; width: 80px; outline: none;"></label>
+                                </div>
+                            </div>
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-secondary prev-step" data-step="1">Back</button>
+                                <button type="button" class="btn next-step" data-step="3">Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Tribute -->
+                        <div class="form-step" id="step-3">
+                            <h3 class="step-title">Tribute Gift (Optional)</h3>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="tribute-gift">
+                                <label for="tribute-gift">Make this donation in honor or in memory of someone</label>
+                            </div>
+                            <div id="tribute-fields" style="display: none;">
+                                <div class="form-group">
+                                    <label for="tribute-type">Tribute Type</label>
+                                    <select id="tribute-type" class="form-control">
+                                        <option value="honor">In Honor Of</option>
+                                        <option value="memory">In Memory Of</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-name">Recipient Name</label>
+                                    <input type="text" id="recipient-name" class="form-control">
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="notify-recipient">
+                                    <label for="notify-recipient">Send an e-card to notify them</label>
+                                </div>
+                                <div class="form-group" id="recipient-email-field" style="display: none;">
+                                    <label for="recipient-email">Recipient Email</label>
+                                    <input type="email" id="recipient-email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-secondary prev-step" data-step="2">Back</button>
+                                <button type="button" class="btn next-step" data-step="4">Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Personal Info -->
+                        <div class="form-step" id="step-4">
+                            <h3 class="step-title">Your Information</h3>
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-secondary prev-step" data-step="3">Back</button>
+                                <button type="button" class="btn next-step" data-step="5">Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Payment -->
+                        <div class="form-step" id="step-5">
+                            <h3 class="step-title">Payment Information</h3>
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" class="form-control" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                            <div style="display: flex; gap: 15px;">
+                                <div class="form-group" style="flex: 1;">
+                                    <label for="expiry-date">Expiry Date</label>
+                                    <input type="text" id="expiry-date" class="form-control" placeholder="MM/YY" required>
+                                </div>
+                                <div class="form-group" style="flex: 1;">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" class="form-control" placeholder="123" required>
+                                </div>
+                            </div>
+                            <div class="security-badges">
+                                <div class="badge">
+                                    <i class="fas fa-lock"></i> SSL Secure
+                                </div>
+                                <div class="badge">
+                                    <i class="fas fa-shield-alt"></i> PCI Compliant
+                                </div>
+                            </div>
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-secondary prev-step" data-step="4">Back</button>
+                                <button type="submit" class="btn">Complete Your Donation</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="testimonials">
+                    <h3 style="margin-bottom: 20px; color: var(--primary-dark);">Stories of Hope & Healing</h3>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The new blood equipment funded by donors like you helped save my father's life. We are forever grateful for the exceptional care he received at Hope General."</p>
+                        <p class="testimonial-author">- The Tugume Family</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"As a doctor in the NCIH, I've seen firsthand how donor-funded equipment makes a difference. The new incubators have improved outcomes for our most vulnerable patients."</p>
+                        <p class="testimonial-author">- Dr. James, NCIH Director</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The charity care fund allowed my student to receive the cancer treatment she needed when we had no insurance. Thank you for giving us hope during our darkest days."</p>
+                        <p class="testimonial-author">- Mr. magezi, Golden dove junior schoo. Director</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Matching Gifts Section -->
+    <section class="matching-gifts">
+        <div class="container">
+            <h2 class="section-title">Double Your Impact</h2>
+            <p>Many companies match employee donations to non-profit organizations like nyce care international Hospital. Check with your HR department to see if your gift can be matched.</p>
+            <a href="#" class="btn">Search Our Matching Gift Database</a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is my donation tax-deductible?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, Nyce care international is a 501(c)(3) non-profit organization. Our Tax ID is +33-5971545. You will receive a receipt for your records.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I restrict my donation to a specific department?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! On the donation form, you can specify where you'd like your gift to be directed. If you don't select a specific area, your donation will be used where it's needed most.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How can I get more information?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Please contact our Foundation office at +256 70069788 or foundation@nycecare.org. Our team would be happy to answer any questions you may have.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I make a recurring donation?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! When you select "Monthly Gift" on the donation form, your donation will automatically recur each month. You can cancel or modify your recurring donation at any time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Nyce care international</h3>
+                    <p>mobile on your door</p>
+                   
+                    <p>Phone: +256 700697888 </p>
+                    <p>Email: info@nycecareinternational.org</p>
+                    <div class="social-icons">
+                        <a href="https://wa.link/5dbfcx"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Services</a>
+                    <a href="#">Find a Doctor</a>
+                    <a href="#">Patient Portal</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Ways to Give</h3>
+                    <a href="#">One-time Donation</a>
+                    <a href="#">Monthly Giving</a>
+                    <a href="#">Tribute Gifts</a>
+                    <a href="#">Planned Giving</a>
+                    <a href="#">Corporate Partnerships</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Foundation</h3>
+                    <p>Foundation Phone: +256 700697888</p>
+                    <p>Foundation Email: foundation@nycecare international.org</p>
+                    <p>Office Hours: Mon-Fri, 9am-5pm</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 nyce care international. All rights reserved.</p>
+                <p>&star; Desgned by techpulse (T.F) </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const nextButtons = document.querySelectorAll('.next-step');
+            const prevButtons = document.querySelectorAll('.prev-step');
+            const formSteps = document.querySelectorAll('.form-step');
+            
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const currentStep = this.closest('.form-step');
+                    const nextStepId = this.getAttribute('data-step');
+                    
+                    currentStep.classList.remove('active');
+                    document.getElementById(`step-${nextStepId}`).classList.add('active');
+                });
+            });
+            
+            prevButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const currentStep = this.closest('.form-step');
+                    const prevStepId = this.getAttribute('data-step');
+                    
+                    currentStep.classList.remove('active');
+                    document.getElementById(`step-${prevStepId}`).classList.add('active');
+                });
+            });
+            
+            // Tribute Gift Toggle
+            const tributeCheckbox = document.getElementById('tribute-gift');
+            const tributeFields = document.getElementById('tribute-fields');
+            
+            tributeCheckbox.addEventListener('change', function() {
+                if (this.checked) {
+                    tributeFields.style.display = 'block';
+                } else {
+                    tributeFields.style.display = 'none';
+                }
+            });
+            
+            // Notify Recipient Toggle
+            const notifyCheckbox = document.getElementById('notify-recipient');
+            const recipientEmailField = document.getElementById('recipient-email-field');
+            
+            notifyCheckbox.addEventListener('change', function() {
+                if (this.checked) {
+                    recipientEmailField.style.display = 'block';
+                } else {
+                    recipientEmailField.style.display = 'none';
+                }
+            });
+            
+            // Custom Amount Toggle
+            const customAmountRadio = document.getElementById('amount-other');
+            const customAmountInput = document.getElementById('custom-amount');
+            
+            customAmountRadio.addEventListener('change', function() {
+                if (this.checked) {
+                    customAmountInput.focus();
+                }
+            });
+            
+            customAmountInput.addEventListener('focus', function() {
+                customAmountRadio.checked = true;
+            });
+            
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Form Submission
+            const donationForm = document.getElementById('donation-form');
+            
+            donationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your generous donation! In a real implementation, this would process your payment.');
+                // In a real implementation, you would process the payment here
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayce care international / holistic health and healing devine grace | Compassionate Care, Advanced Medicine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a4b7c;
+            --primary-dark: #105fd6;
+            --dark-blue: #0d2d4e;
+            --light-blue: #e8f2fa;
+            --teal: #2a9d8f;
+            --light-teal: #e9f8f6;
+            --white: #ffffff;
+            --light-gray: #f5f7fa;
+            --medium-gray: #e0e0e0;
+            --dark-gray: #555555;
+            --text-color: #333333;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.733);
+            --button:rgb(255, 187, 0);
+            --frank:rgb(0, 153, 255);
+;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-blue);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--teal);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #238f83;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow:2px 1px 4px #160202c9;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            text-shadow: #160202;
+            background-color: #ffffff;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0;
+            color: var(--primary-blue);
+            text-shadow: 2px 2px 4px #1b0c0c;
+            
+
+        }
+ 
+        .logo-text{
+            text-shadow: #130606e5;
+        }
+        .logo span {
+            color: var(--teal);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+            font-size: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        nav ul li a:hover {
+            color: var(--teal);
+        }
+
+        nav ul li a.active {
+            color: var(--teal);
+            font-weight: 600;
+        }
+
+        .appointment-btn {
+            background-color: var(--teal);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .appointment-btn:hover {
+            background-color: #b19705;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            box-shadow: #130606;
+        }
+
+        /* Page Content */
+        .page {
+            display: none;
+            padding: 40px 0;
+            min-height: 70vh;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 75, 124, 0.349), rgba(26, 75, 124, 0.9)), url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        text-shadow: #1b0c0c;
+    
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .hero-btns .btn {
+            padding: 14px 32px;
+            font-size: 1.1rem;
+            background-color: #ff6702;
+            border-radius: 20px;
+            box-shadow: #160202;
+        }
+      
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--teal);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--teal);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Map Section */
+        .map-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .map-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .map-wrapper {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        #hospital-map {
+            height: 400px;
+            width: 100%;
+            background-color: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .map-info {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--light-blue);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .map-info h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-info {
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            color: var(--teal);
+            margin-right: 15px;
+            font-size: 1.2rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table tr {
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 500;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--light-teal);
+        }
+
+        .testimonial-carousel {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-slide {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--teal);
+            opacity: 0.3;
+            position: absolute;
+        }
+
+        .testimonial-text::before {
+            top: -20px;
+            left: -10px;
+        }
+
+        .testimonial-text::after {
+            bottom: -40px;
+            right: -10px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--medium-gray);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-dot.active {
+            background-color: var(--teal);
+        }
+
+        /* Doctors Section */
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .doctor-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .doctor-img {
+            height: 250px;
+            background-color: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+        }
+
+        .doctor-info {
+            padding: 20px;
+        }
+
+        .doctor-info h3 {
+            margin-bottom: 5px;
+        }
+
+        .doctor-specialty {
+            color: var(--teal);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        /* Patients Section */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .info-card h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .info-card h3 i {
+            margin-right: 10px;
+            color: var(--teal);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--medium-gray);
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--teal);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #cccccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--teal);
+        }
+
+        .contact-details {
+            color: #cccccc;
+        }
+
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--teal);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+
+ .btn {
+            display: inline-block;
+            background-color: var(--button);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #98b80a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+
+
+        .newsletter-form button {
+            background-color: var(--teal);
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #238f83;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaaaaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-btns .btn {
+                width: 200px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .appointment-btn {
+                display: none;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .testimonial-slide {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>NAYCE CA<span>RE INTERNATIONAL</span></h1>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#services" class="nav-link" data-page="services">Services</a></li>
+                    <li><a href="#doctors" class="nav-link" data-page="doctors">Doctors</a></li>
+                    <li><a href="#patients" class="nav-link" data-page="patients">Patients & Visitors</a></li>
+                    <li><a href="#contact" class="nav-link" data-page="contact">Contact Us</a></li>
+                      <li><a href="donation.html" class="btn"  >Donate Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home-page" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2>Compassionate Care, Advanced Medicine</h2>
+                <p>At Nayce care international we combine cutting-edge medical technology with compassionate healthcare professionals to provide the highest quality care for you and your family.</p>
+                <div class="hero-btns">
+                    <a href="donation.html" class="btn" >Donate now</a>
+                    <a href="tel:+256701590235" class="btn">Emergency call</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Specialized Care Centers</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-ambulance"></i>
+                        </div>
+                        <h3>Emergency Care</h3>
+                        <p>24/7 emergency services with board-certified emergency physicians.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Cardiology</h3>
+                        <p>Comprehensive heart care from prevention to advanced surgical procedures.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h3>Maternity</h3>
+                        <p>Family-centered care for expectant mothers and newborns.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-bone"></i>
+                        </div>
+                        <h3>Orthopedics</h3>
+                        <p>Expert care for bones, joints, and sports-related injuries.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h3>Pediatrics</h3>
+                        <p>Specialized medical care for infants, children, and adolescents.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Find Us Easily</h2>
+                </div>
+                <div class="map-container">
+                    <div class="map-wrapper">
+                        <div id="hospital-map">
+                            <div id="map-content">
+                                <h3>Nayce care international location</h3>
+                                <p>Interactive Map Loading...</p>
+                                <button id="load-map-btn" class="btn btn-primary">Load Interactive Map</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-info">
+                        <h3>Nayce care international</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <p>mobile at your door</p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <p>+256 700697888</p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <p>nycecareinternational@gmail.com</p>
+                            </div>
+                        </div>
+                        <h4>Emergency Department Hours</h4>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Monday - Friday</td>
+                                <td>24/7</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday - Sunday</td>
+                                <td>24/7</td>
+                            </tr>
+                            <tr>
+                                <td>Holidays</td>
+                                <td>24/7</td>
+                            </tr>
+                        </table>
+                        <a href="#contact" class="btn btn-primary nav-link" data-page="contact" style="margin-top: 20px; display: inline-block;">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Patient Testimonials</h2>
+                </div>
+                <div class="testimonial-carousel">
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">The care I received at Nyce care international . From the emergency room to my recovery, every staff member was professional, compassionate, and knowledgeable. They made a difficult time much easier for me and my family.</p>
+                        <p class="testimonial-author">- Mukasa  Johnson</p>
+                    </div>
+                    <div class="carousel-controls">
+                        <div class="carousel-dot active"></div>
+                        <div class="carousel-dot"></div>
+                        <div class="carousel-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Services Page -->
+    <section id="services-page" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Medical Services</h2>
+                <p>Comprehensive healthcare services for all your medical needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Emergency Care</h3>
+                    <p>Our emergency department is staffed 24/7 with board-certified emergency physicians and equipped with state-of-the-art technology to handle any medical emergency.</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Cardiology</h3>
+                    <p>Comprehensive heart care services including preventive cardiology, diagnostic testing, interventional procedures, and cardiac rehabilitation.</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Maternity & Newborn</h3>
+                    <p>Family-centered care for expectant mothers with modern labor and delivery suites, neonatal intensive care, and lactation support.</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>Orthopedics</h3>
+                    <p>Expert care for musculoskeletal conditions including joint replacement, sports medicine, fracture care, and physical therapy.</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Pediatrics</h3>
+                    <p>Specialized medical care for infants, children, and adolescents in a child-friendly environment with pediatric specialists.</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Learn More</a>
+                </div>
+
+                        <div class="service-card">
+                    <div class="service-icon">
+                        <p>🚐</p>
+                    </div>
+                    <h3>Mobile Clinic and Medical Services.</h3>
+                        <p>Our mobile medical team brings quality healthcare to your home, workplace, or community. We provide consultations, check-ups, and follow-up treatments wherever you are — ensuring you receive hospital-level care in the comfort of your environment.
+                         </p>
+                
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Learn More</a>
+                </div>
+
+
+
+
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <p>🧪</p>
+                    </div>
+                    <h3> Mobile Laboratory Services
+</h3>
+                    <p>We offer a full range of laboratory tests right at your doorstep. From blood tests and diagnostics to health screenings, our mobile lab ensures accurate, quick, and confidential results — without the need to visit a hospital.
+
+</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Learn More</a>
+                </div>
+
+<div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa fa-medkit"></i>
+                    </div>
+                    <h3> Elderly and Geriatric Care</h3>
+                    <p>We offer dedicated, respectful care for the elderly — ensuring dignity, comfort, and emotional support. Our caregivers and nurses provide assistance with daily activities, medication management, and companionship
+                         to improve the quality of life for seniors.</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Learn More</a>
+                </div>
+ <div class="service-card">
+                    <div class="service-icon">
+                        <p>🏢</p>
+                    </div>
+                    <h3> Hospital Caring</h3>
+                    <p>When families are unable to be physically present,
+                         we step in with professional and family-centered care.
+                          Our caregivers and nurses provide round-the-clock support to
+                           hospitalized patients — ensuring they receive both expert medical
+                         attention and the warmth of family presence.</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Learn More</a>
+                </div>
+
+<div class="service-card">
+                    <div class="service-icon">
+                        <p>🧑‍🦳</p>
+                    </div>
+                    <h3>Elderly and Geriatric Care  </h3>
+                    <p>We offer dedicated, respectful care for the elderly — ensuring dignity, comfort, and emotional support. Our caregivers and nurses provide assistance with daily activities, medication management, and companionship to improve the quality of life for seniors.</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Learn More</a>
+                </div>
+
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h3>Bedside and home care Nursing</h3>
+                    <p>We bring hospital-level care to the comfort of your home. Our qualified nurses offer 24-hour bedside and home care to patients recoveri
+                        ng from illness, surgery, or chronic conditions. With professionalism and compassion, we ensure continuous monitoring, comfort, and healing in a familiar environment.</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Page -->
+    <section id="doctors-page" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Medical Specialists</h2>
+                <p>Meet our team of board-certified physicians and healthcare professionals</p>
+            </div>
+            
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md" style="font-size: 4rem; color: var(--teal);"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Kayongo mark</h3>
+                        <p class="doctor-specialty">CEO</p>
+                        <p> kayongo mark as the CEO , director , me as just a work , we are both nurses, not doctorz.</p>
+                        <a href="tel:+256709590081" class="btn " style="margin-top: 15px; display: inline-block;">Request Appointment</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-img">
+                        <i class="fas fa-user-md" style="font-size: 4rem; color: var(--teal);"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr.Ssebuliba James</h3>
+                        <p class="doctor-specialty">Director</p>
+                        <p> <Th></Th>e head of the nursing section, founder , director, senior nursing officer.</p>
+                        <a href="tel:+256 701590235" class="btn " style="margin-top: 15px; display: inline-block;">Request Appointment</a>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Patients & Visitors Page -->
+    <section id="patients-page" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Patients & Visitors</h2>
+                <p>Information to help you prepare for your visit to Pinnacle General Hospital</p>
+            </div>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3><i class="fas fa-calendar-check"></i> Planning Your Visit</h3>
+                    <p>We recommend arriving 30 minutes before your scheduled appointment to complete any necessary paperwork. Please bring your insurance card, photo ID, and a list of current medications.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li>Check-in at the main reception desk</li>
+                        <li>Free valet parking available</li>
+                        <li>Wi-Fi access throughout the hospital</li>
+                        <li>Interpretation services available</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-procedures"></i> Patient Resources</h3>
+                    <p>Access your medical records, pay bills online, and find helpful health information through our patient portal.</p>
+                    <a href="#" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Patient Portal</a>
+                    <a href="#" class="btn btn-secondary" style="margin-top: 15px; display: inline-block;">Download Forms</a>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-user-friends"></i> Visitor Information</h3>
+                    <p>We welcome visitors during designated hours to support our patients' recovery. Please note:</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li>General visiting hours: 8:00 AM - 8:00 PM</li>
+                        <li>ICU visiting hours: 10:00 AM - 6:00 PM, 8:00 PM - 10:00 PM</li>
+                        <li>Children under 12 must be accompanied by an adult</li>
+                        <li>Please check with nursing staff for maternity ward policies</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-utensils"></i> Amenities & Services</h3>
+                    <p>We offer various amenities to make your stay more comfortable:</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li>Cafeteria and coffee shop</li>
+                        <li>Gift shop with flowers and gifts</li>
+                        <li>Chapel and meditation room</li>
+                        <li>ATM and banking services</li>
+                        <li>Pharmacy on-site</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact-page" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with Pinnacle General Hospital</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="appointment">Appointment Request</option>
+                                <option value="billing">Billing Inquiry</option>
+                                <option value="medical-records">Medical Records</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="map-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p>At your door</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <p>+256 700697888</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <p>Nycecareinternational@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Emergency Department</h4>
+                    <p>For medical emergencies, please call 911 or come directly to our Emergency Department.</p>
+                    <p><strong>Emergency Phone:</strong> +256 701169202</p>
+                    
+                    <h4>Departments</h4>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Main Reception: Ext. 1000</li>
+                        <li>Patient Relations: Ext. 1200</li>
+                        <li>Billing Department: Ext. 1300</li>
+                        <li>Medical Records: Ext. 1400</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="nav-link" data-page="home">Home</a></li>
+                        <li><a href="#services" class="nav-link" data-page="services">Services</a></li>
+                        <li><a href="#doctors" class="nav-link" data-page="doctors">Doctors</a></li>
+                        <li><a href="#patients" class="nav-link" data-page="patients">Patients & Visitors</a></li>
+                        <li><a href="#contact" class="nav-link" data-page="contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services" class="nav-link" data-page="services">Emergency Care</a></li>
+                        <li><a href="#services" class="nav-link" data-page="services">Cardiology</a></li>
+                        <li><a href="#services" class="nav-link" data-page="services">Maternity</a></li>
+                        <li><a href="#services" class="nav-link" data-page="services">Orthopedics</a></li>
+                        <li><a href="#services" class="nav-link" data-page="services">Pediatrics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i>Mobile at your door</p>
+                        <p><i class="fas fa-phone"></i> +256 700697888 </p>
+                        <p><i class="fas fa-envelope"></i> naycecareinternational@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> Emergency: 24/7</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for health tips and hospital updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Nayce care international. All Rights Reserved.</p>
+                  <p>&star; Desgned by Techpulse .(`T.F)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+                document.getElementById('main-menu').classList.toggle('show');
+            });
+            
+            // Page navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+            
+            // Function to show a specific page and update active nav link
+            function showPage(pageId) {
+                // Hide all pages
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show the selected page
+                document.getElementById(pageId + '-page').classList.add('active');
+                
+                // Update active nav link
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-page') === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Close mobile menu if open
+                document.getElementById('main-menu').classList.remove('show');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            }
+            
+            // Add click event to all nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+            
+            // Handle initial page load based on URL hash
+            function handleInitialPage() {
+                const hash = window.location.hash.substring(1);
+                if (hash && document.getElementById(hash + '-page')) {
+                    showPage(hash);
+                } else {
+                    showPage('home');
+                }
+            }
+            
+            // Handle browser back/forward buttons
+            window.addEventListener('hashchange', handleInitialPage);
+            
+            // Initialize page
+            handleInitialPage();
+            
+            // Interactive map functionality
+            const loadMapBtn = document.getElementById('load-map-btn');
+            const mapContent = document.getElementById('map-content');
+            
+            if (loadMapBtn) {
+                loadMapBtn.addEventListener('click', function() {
+                    // Create a simple interactive map simulation
+                    mapContent.innerHTML = `
+                        <div style="text-align: center; padding: 20px;">
+                            <h3>Nayce care international</h3>
+                            <div style="height: 250px; background: linear-gradient(to right, #e8f2fa, #c7e6ff); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 20px 0; position: relative;">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #e74c3c; color: white; padding: 10px 15px; border-radius: 4px; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                                    <i class="fas fa-map-marker-alt"></i> You Are Here
+                                </div>
+                                <div style="position: absolute; top: 30%; left: 60%; background: var(--teal); color: white; padding: 8px 12px; border-radius: 4px; font-weight: bold;">
+                                    <i class="fas fa-hospital"></i> Nyce care
+                                </div>
+                            </div>
+                            <p>Nateete ku mabiito </p>
+                            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px;">
+                                <button class="btn btn-primary" onclick="alert('Directions loaded!')">
+                                    <i class="fas fa-directions"></i> Get Directions
+                                </button>
+                                <button class="btn btn-secondary" onclick="alert('Street view loaded!')">
+                                    <i class="fas fa-street-view"></i> Street View
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+            
+            // Testimonial carousel
+            const dots = document.querySelectorAll('.carousel-dot');
+            const testimonials = [
+                {
+                    text: "The care I received at Nayce care international was exceptional. From the emergency room to my recovery, every staff member was professional, compassionate, and knowledgeable. They made a difficult time much easier for me and my family.",
+                    author: "- Tugume Frank"
+                },
+                {
+                    text: "After my cardiac procedure, I can confidently say that Nayce care international has the best cardiology team in the region. The doctors took time to explain everything, and the nursing staff was attentive and caring throughout my stay.",
+                    author: "- Muhumuza Jonathan"
+                },
+                {
+                    text: "The maternity ward made the birth of our first child a wonderful experience. The private rooms were comfortable, and the lactation consultants were incredibly helpful. We're so grateful for their support.",
+                    author: "- mr. Mugwanya david and Nakalema josephin "
+                },
+                 {
+                    text: "The care i recieved on Nyce care international was so intense, from the customer care services i recieved from the reception from  ms. Nakalema Bridget",
+                    author: "- Mr.Bulega johnbosco "
+                }
+            ];
+            
+            let currentTestimonial = 0;
+            const testimonialText = document.querySelector('.testimonial-text');
+            const testimonialAuthor = document.querySelector('.testimonial-author');
+            
+            // Function to update testimonial
+            function updateTestimonial(index) {
+                if (testimonialText && testimonialAuthor) {
+                    testimonialText.textContent = testimonials[index].text;
+                    testimonialAuthor.textContent = testimonials[index].author;
+                    
+                    // Update active dot
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === index);
+                    });
+                }
+            }
+            
+            // Add click events to dots
+            if (dots.length > 0) {
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        currentTestimonial = index;
+                        updateTestimonial(currentTestimonial);
+                    });
+                });
+                
+                // Auto-rotate testimonials
+                setInterval(() => {
+                    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                    updateTestimonial(currentTestimonial);
+                }, 5000);
+            }
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! We will get back to you soon.');
+                    this.reset();
+                });
+            }
+            
+            // Newsletter form submission
+            const newsletterForms = document.querySelectorAll('.newsletter-form');
+            newsletterForms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const emailInput = this.querySelector('input[type="email"]');
+                    alert(`Thank you for subscribing with ${emailInput.value}!`);
+                    emailInput.value = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
